@@ -7,7 +7,13 @@
   --light-blue: #e9e6ff;
   --brown: #583e23;
   /* Measurements */
-  --lr-padding: 100px;
+  --lr-padding: 30px;
+}
+
+@media screen and (min-width: 700px) {
+  :root {
+    --lr-padding: 100px;
+  }
 }
 
 /* Base styles */
@@ -18,11 +24,11 @@ body {
 }
 
 h1 {
+  margin: 0;
   color: var(--tan);
 }
 
 h2 {
-  padding-top: 1em;
   color: var(--dark-blue);
   font-size: 2.5em;
   font-weight: 100;
@@ -73,8 +79,11 @@ header .header-top-row {
 }
 
 header .header-top-row div {
-  width: 25%;
-  min-width: 150px;
+  width: 90%;
+}
+
+header .search-bar {
+  display: none;
 }
 
 input {
@@ -83,11 +92,11 @@ input {
 }
 
 .header-nav {
-  align-items: flex-end;
+  display: none;
 }
 
 nav {
-  width: 50%;
+  width: 600px;
   margin: 0 -15px;
 }
 
@@ -100,24 +109,57 @@ nav ul li a {
   padding: 0 15px;
 }
 
+@media screen and (min-width: 700px) {
+  header .header-top-row div {
+    width: 22%;
+    min-width: 150px;
+  }
+
+  header .search-bar {
+    display: block;
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
 /* Body */
 #wrapper {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-between;
-  padding: 0 var(--lr-padding);
+  padding: 40px var(--lr-padding);
 }
 
 /* Sidebar */
 #sidebar {
-  width: 20%;
+  width: 90%;
   margin: 1em 0;
+  min-width: 200px;
+}
+
+main {
+  width: 90%;
 }
 
 #sidebar p {
   font-size: 1.2em;
+  font-weight: 100;
   padding-bottom: 1em;
   border-bottom: .1px solid grey;
+}
+
+@media screen and (min-width: 700px) {
+
+  #sidebar {
+    width: 20%;
+  }
+
+  main {
+    width: 60%;
+  }
 }
 
 /* Footer */

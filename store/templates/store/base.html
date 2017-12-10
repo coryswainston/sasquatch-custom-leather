@@ -11,7 +11,7 @@
     <header>
       <div class="header-top-row">
         <div class="title">
-          <h1><a href="">Sasquatch Custom Leather</a></h1>
+          <h1><a href="{% url 'home' %}">Sasquatch Custom Leather</a></h1>
         </div>
         <div class="search-bar">
           <input type="text" placeholder="Search products..." />
@@ -20,12 +20,12 @@
       <div class="header-nav">
         <nav>
           <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Shop</a></li>
-            <li><a href="">Cart</a></li>
-            <li><a href="">Checkout</a></li>
-            <li><a href="">Contact Us</a></li>
-            <li><a href="">Our Values</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'shop' %}">Shop</a></li>
+            <li><a href="{% url 'cart' %}">Cart</a></li>
+            <li><a href="{% url 'checkout' %}">Checkout</a></li>
+            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            <li><a href="{% url 'values' %}">Our Values</a></li>
           </ul>
         </nav>
       </div>
@@ -46,7 +46,7 @@
         <div class="fb-page"
              data-href="https://www.facebook.com/sasquatchcustomleather/"
              data-width="200" data-height="250"
-             data-small-header="false"
+             data-small-header="true"
              data-adapt-container-width="true"
              data-hide-cover="false"
              data-show-facepile="true">
