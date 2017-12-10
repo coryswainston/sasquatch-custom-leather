@@ -7,7 +7,7 @@
   --light-blue: #e9e6ff;
   --brown: #583e23;
   /* Measurements */
-  --l-r-padding: 100px;
+  --lr-padding: 100px;
 }
 
 /* Base styles */
@@ -22,6 +22,7 @@ h1 {
 }
 
 h2 {
+  padding-top: 1em;
   color: var(--dark-blue);
   font-size: 2.5em;
   font-weight: 100;
@@ -30,6 +31,16 @@ h2 {
 ul {
   list-style: none;
   padding: 0;
+}
+
+p {
+  color: var(--brown);
+  font-weight: 600;
+}
+
+.italic {
+  font-weight: 100;
+  font-style: italic;
 }
 
 a {
@@ -46,7 +57,7 @@ header {
   color: var(--tan);
   box-sizing: inherit;
   width: 100%;
-  padding: 30px var(--l-r-padding) 10px;
+  padding: 30px var(--lr-padding) 10px;
   background: var(--dark-blue);
 }
 
@@ -90,6 +101,29 @@ nav ul li a {
 }
 
 /* Body */
-main {
-  padding: 0 var(--l-r-padding);
+#wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 0 var(--lr-padding);
+}
+
+/* Sidebar */
+#sidebar {
+  width: 20%;
+  margin: 1em 0;
+}
+
+#sidebar p {
+  font-size: 1.2em;
+  padding-bottom: 1em;
+  border-bottom: .1px solid grey;
+}
+
+/* Footer */
+footer {
+  margin-top: 100px;
+  padding: 50px var(--lr-padding);
+  background: var(--brown);
+  color: var(--light-blue);
 }
