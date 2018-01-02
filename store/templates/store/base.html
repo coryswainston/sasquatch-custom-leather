@@ -8,9 +8,15 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
   <body>
+    <div id="login">
+      <a target="_blank" href="/admin">Login</a>
+    </div>
     <header>
       <div class="header-top-row">
         <div class="title">
+          <div class="logo">
+            <img src="{% static 'images/blue-skin-logo.jpg' %}" alt="Sasquatch Custom Leather" />
+          </div>
           <h1><a href="{% url 'home' %}">Sasquatch Custom Leather</a></h1>
         </div>
         <div class="search-bar">
@@ -21,11 +27,10 @@
         <nav>
           <ul>
             <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'shop' %}">Shop</a></li>
-            <li><a href="{% url 'cart' %}">Cart</a></li>
-            <li><a href="{% url 'checkout' %}">Checkout</a></li>
-            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            <li><a href="{% url 'shop' %}">Gun Belts</a></li>
+            <li><a href="{% url 'contact' %}">Custom Items</a></li>
             <li><a href="{% url 'values' %}">Our Values</a></li>
+            <li><a href="{% url 'cart' %}">My Cart</a></li>
           </ul>
         </nav>
       </div>

@@ -1,8 +1,27 @@
 {% extends 'store/base.html' %}
+{% load staticfiles %}
 
 {% block content %}
-<h2>Shop</h2>
-<p class="italic">
-  No items available yet.
-</p>
+  <h2>Products</h2>
+  <div class="products">
+    {% for product in products %}
+    <a href="">
+      <div class="product">
+        <div class="photo">
+          {% with product.photo_url as image_path %}
+          <img alt="{{ product.name }}" src="{% static image_path %}" />
+          {% endwith %}
+        </div>
+        <div class="product-info">
+          <div>
+            {{ product.name }}
+          </div>
+          <div>
+            {{ product.price }}
+          </div>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
 {% endblock %}
