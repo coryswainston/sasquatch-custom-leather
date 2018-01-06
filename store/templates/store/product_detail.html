@@ -1,0 +1,22 @@
+{% extends 'store/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="product-detail-wrapper">
+  <div class="big-product-img">
+    {% with product.photo_url as image_path %}
+    <img alt="{{ product.name }}" src="{% static image_path %}" />
+    {% endwith %}
+  </div>
+  <div class="product-description">
+    <h3>{{ product.name }}</h3>
+    <h4>{{ product.price }}</h4>
+    <p>
+      {{ product.description }}
+    </p>
+    <form method="POST">{% csrf_token %}
+      <button type="submit">ADD TO CART</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

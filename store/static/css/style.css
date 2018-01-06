@@ -224,3 +224,32 @@ footer {
   bottom: 5px;
   color: white;
 }
+
+/* Product Detail */
+.product-detail-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.big-product-img {
+  width: 40%;
+}
+
+.big-product-img img {
+  width: 100%;
+}
+
+.product-description {
+  width: 40%;
+}
+
+th {
+  text-align: left;
+}
+
+.right-align {
+  text-align: right;
+}

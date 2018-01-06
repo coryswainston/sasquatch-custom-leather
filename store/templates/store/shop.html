@@ -5,7 +5,7 @@
   <h2>Products</h2>
   <div class="products">
     {% for product in products %}
-    <a href="">
+    <a href="{% url 'product_detail' pk=product.pk %}">
       <div class="product">
         <div class="photo">
           {% with product.photo_url as image_path %}

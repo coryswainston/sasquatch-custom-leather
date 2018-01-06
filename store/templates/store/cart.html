@@ -2,7 +2,31 @@
 
 {% block content %}
 <h2>Your Cart</h2>
-<p class="italic">
-  No items in your cart.
-</p>
+{% if products|length > 0 %}
+<table>
+  <tr>
+    <th>Item</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th></th>
+  </tr>
+  {% for product in products %}
+  <tr>
+    <td>{{ product.name }}</td>
+    <td>{{ product.price }}</td>
+    <td class="right-align">{{ product.quantity }}</td>
+    <td>
+      <form method="POST">{% csrf_token %}
+        <input type="hidden" name="product_pk" value="{{ product.pk }}"/>
+        <button type="submit">x</button>
+      </form>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% else %}
+  <p class="italic">
+    Your cart is currently empty.
+  </p>
+{% endif %}
 {% endblock %}
