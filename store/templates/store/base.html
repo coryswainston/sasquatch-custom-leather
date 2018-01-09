@@ -9,7 +9,13 @@
   </head>
   <body>
     <div id="login">
-      <a target="_blank" href="/admin">Login</a>
+      <a target="_blank" href="/admin">
+        {% if user_name == None %}
+        Login
+        {% else %}
+        Welcome, {{ user_name }}!
+        {% endif %}
+      </a>
     </div>
     <header>
       <div class="header-top-row">

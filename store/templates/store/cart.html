@@ -3,11 +3,11 @@
 {% block content %}
 <h2>Your Cart</h2>
 {% if products|length > 0 %}
-<table>
+<table class="cart">
   <tr>
     <th>Item</th>
     <th>Price</th>
-    <th>Quantity</th>
+    <th class="right-align">Quantity</th>
     <th></th>
   </tr>
   {% for product in products %}
@@ -18,12 +18,18 @@
     <td>
       <form method="POST">{% csrf_token %}
         <input type="hidden" name="product_pk" value="{{ product.pk }}"/>
-        <button type="submit">x</button>
+        <button class="remove-item" type="submit">x</button>
       </form>
     </td>
   </tr>
   {% endfor %}
+  <tr class="total">
+    <td>Total</td>
+    <td>{{ total_cost }}</td>
+    <td></td>
+  </tr>
 </table>
+<button class="checkout">PROCEED TO CHECKOUT</button>
 {% else %}
   <p class="italic">
     Your cart is currently empty.

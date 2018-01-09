@@ -253,3 +253,31 @@ th {
 .right-align {
   text-align: right;
 }
+
+/* Cart styles */
+.cart {
+  width: 100%;
+}
+
+tr:nth-child(even) {
+  background: #ddd;
+}
+
+.cart button {
+  background: red;
+  border: none;
+  border-radius: 100%;
+  color: white;
+  cursor: pointer;
+  margin: 10px 10px;
+}
+
+.checkout {
+  background: var(--light-blue);
+  border: none;
+  border-radius: 5px;
+  color: var(--brown);
+  padding: 3px;
+  margin: 10px 0;
+  cursor: pointer;
+}
